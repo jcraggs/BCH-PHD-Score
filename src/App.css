@@ -42,7 +42,7 @@ button {
 select {
   width: 98%;
   height: 25px;
-
+  font-size: 1.1em;
   margin-bottom: 2.5px;
   margin-top: 2.5px;
 }
@@ -66,24 +66,26 @@ h3 {
   background: orangered;
   color: orangered;
   grid-row-start: 1;
-  grid-row: span 4;
-  margin: 0;
+  grid-row-end: 99;
+  margin-top: 0.01px;
+  margin-bottom: 0.01px;
 }
 
 .filled {
   background: lightgreen;
   color: lightgreen;
   grid-row-start: 1;
-  grid-row: span 4;
-  margin: 0;
+  grid-row-end: 99;
+  margin-top: 0.01px;
+  margin-bottom: 0.01px;
 }
 
 /* Radio Buttons */
 input {
   text-align: center;
   vertical-align: middle;
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   margin: 2.5px;
   background-color: grey;
 }
@@ -94,19 +96,143 @@ input:checked {
 
 /* LIVER DYSFUNCTION */
 .LDContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   font-size: 0.7em;
-  padding: 7.5px;
+  margin: 7.5px;
+  border: 2px solid black;
+  align-content: center;
+  align-items: center;
 }
 
 .LDTableTitle {
   grid-row: 1;
-  grid-column: span 6;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
-.AscitesSelect {
-  grid-column: span 5;
+/* AST */
+
+.ASTTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+
+.ASTContainer {
+  grid-row: 3;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.ASTWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  margin: 0;
+}
+/* Bilirubin */
+
+.BilirubinTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 3;
+}
+
+.BilirubinContainer {
+  grid-row: 4;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.BilirubinWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-top: none;
+  margin: 0;
+}
+
+/* PT Secs */
+.PTSecsTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 4;
+}
+
+.PTSecsContainer {
+  grid-row: 5;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.PTSecsWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-top: none;
+  margin: 0;
+}
+
+/* Ascites */
+
+.AscitesTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 5;
+}
+
+.AscitesContainer {
+  grid-row: 6;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.AscitesWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
 }
 
 /* DISEASE SEVERITY */
@@ -117,7 +243,6 @@ input:checked {
   font-size: 0.7em;
   margin: 7.5px;
   border: 2px solid black;
-  /* border-radius: 5px; */
   align-content: center;
   align-items: center;
 }
@@ -156,7 +281,7 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
-  border-bottom: none;
+  margin: 0;
 }
 
 /* Sepsis */
@@ -175,6 +300,12 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
+  border-top: none;
+  margin: 0;
+}
+
+.SepsisSelect {
+  font-size: 1.5em;
 }
 
 /* Invasive Access */
@@ -192,4 +323,8 @@ input:checked {
   grid-row: 4;
   grid-column-start: 1;
   grid-column-end: 2;
+}
+
+.IASelect {
+  font-size: 1.5em;
 }

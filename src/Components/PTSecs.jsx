@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 
-class Albumin extends React.Component {
+class PTSecs extends React.Component {
   state = {
-    albumin: "unfilled",
+    PTSecs: "unfilled",
     op0: false,
     op1: false,
     op2: false,
@@ -13,12 +13,12 @@ class Albumin extends React.Component {
 
   render() {
     return (
-      <div className="AlbuminWrap">
-        <p className={this.state.albumin}> _</p>
-        <h3 className="AlbuminTitle">Albumin g/L</h3>
+      <div className="PTSecsWrap">
+        <p className={this.state.PTSecs}> _</p>
+        <h3 className="PTSecsTitle">PT secs</h3>
 
-        <div className="AlbuminContainer">
-          <div className="Alb0">
+        <div className="PTSecsContainer">
+          <div className="PTSecs0">
             <input
               type="radio"
               value="0"
@@ -28,15 +28,15 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 0);
+                this.setState({ PTSecs: "filled" });
+                this.props.stateUpdater("PTSecs", 0);
               }}
               checked={this.state.op0}
             />
-            <p>> 35</p>
+            <p>&lt; 13</p>
           </div>
 
-          <div className="Alb1">
+          <div className="PTSecs1">
             <input
               type="radio"
               checked={this.state.op1}
@@ -46,13 +46,13 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 1);
+                this.setState({ PTSecs: "filled" });
+                this.props.stateUpdater("PTSecs", 1);
               }}
             />
-            <p>30-34</p>
+            <p>14-19</p>
           </div>
-          <div className="Alb2">
+          <div className="PTSecs2">
             <input
               type="radio"
               checked={this.state.op2}
@@ -62,14 +62,14 @@ class Albumin extends React.Component {
                 this.setState({ op2: true });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 2);
+                this.setState({ PTSecs: "filled" });
+                this.props.stateUpdater("PTSecs", 2);
               }}
             />
-            <p>25-29</p>
+            <p>20-25</p>
           </div>
 
-          <div className="Alb3">
+          <div className="PTSecs3">
             <input
               type="radio"
               checked={this.state.op3}
@@ -79,14 +79,14 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: true });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 3);
+                this.setState({ PTSecs: "filled" });
+                this.props.stateUpdater("PTSecs", 3);
               }}
             />
-            <p>20-24</p>
+            <p>26-30</p>
           </div>
 
-          <div className="Alb4">
+          <div className="PTSecs4">
             <input
               type="radio"
               checked={this.state.op4}
@@ -96,15 +96,15 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: true });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 4);
+                this.setState({ PTSecs: "filled" });
+                this.props.stateUpdater("PTSecs", 4);
               }}
             />
-            <p>&lt; 20</p>
+            <p>> 30</p>
           </div>
         </div>
       </div>
     );
   }
 }
-export default Albumin;
+export default PTSecs;

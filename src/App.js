@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-// import LiverDysfunction from "./Components/LiverDysfunction";
+import LiverDysfunction from "./Components/LiverDysfunction";
 import DiseaseSeverity from "./Components/DiseaseSeverity";
 
 class App extends React.Component {
@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className="App">
         <h1 className="App-Title">Paediatric Hepatology Dependency Score</h1>
         <div className="TableContainer">
-          {/* <LiverDysfunction /> */}
+          <LiverDysfunction stateUpdater={this.stateUpdater} />
           <DiseaseSeverity stateUpdater={this.stateUpdater} />
         </div>
       </div>

@@ -28,9 +28,9 @@ class Sepsis extends React.Component {
             <option>-- Select Value --</option>
             <option value="0">None</option>
             <option value="1">Pyrexial</option>
-            <option value="2">Anti-biotics</option>
+            <option value="2">Antibiotics</option>
             <option value="3">+ve micro</option>
-            <option value="4">*DIC</option>
+            <option value="4">DIC</option>
           </select>
         </div>
       </div>

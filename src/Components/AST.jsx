@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 
-class Albumin extends React.Component {
+class AST extends React.Component {
   state = {
-    albumin: "unfilled",
+    AST: "unfilled",
     op0: false,
     op1: false,
     op2: false,
@@ -13,12 +13,12 @@ class Albumin extends React.Component {
 
   render() {
     return (
-      <div className="AlbuminWrap">
-        <p className={this.state.albumin}> _</p>
-        <h3 className="AlbuminTitle">Albumin g/L</h3>
+      <div className="ASTWrap">
+        <p className={this.state.AST}> _</p>
+        <h3 className="ASTTitle">AST IU/L</h3>
 
-        <div className="AlbuminContainer">
-          <div className="Alb0">
+        <div className="ASTContainer">
+          <div className="AST0">
             <input
               type="radio"
               value="0"
@@ -28,15 +28,15 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 0);
+                this.setState({ AST: "filled" });
+                this.props.stateUpdater("AST", 0);
               }}
               checked={this.state.op0}
             />
-            <p>> 35</p>
+            <p>0-50</p>
           </div>
 
-          <div className="Alb1">
+          <div className="AST1">
             <input
               type="radio"
               checked={this.state.op1}
@@ -46,13 +46,13 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 1);
+                this.setState({ AST: "filled" });
+                this.props.stateUpdater("AST", 1);
               }}
             />
-            <p>30-34</p>
+            <p>51-150</p>
           </div>
-          <div className="Alb2">
+          <div className="AST2">
             <input
               type="radio"
               checked={this.state.op2}
@@ -62,14 +62,14 @@ class Albumin extends React.Component {
                 this.setState({ op2: true });
                 this.setState({ op3: false });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 2);
+                this.setState({ AST: "filled" });
+                this.props.stateUpdater("AST", 2);
               }}
             />
-            <p>25-29</p>
+            <p>151-300</p>
           </div>
 
-          <div className="Alb3">
+          <div className="AST3">
             <input
               type="radio"
               checked={this.state.op3}
@@ -79,14 +79,14 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: true });
                 this.setState({ op4: false });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 3);
+                this.setState({ AST: "filled" });
+                this.props.stateUpdater("AST", 3);
               }}
             />
-            <p>20-24</p>
+            <p>301-500</p>
           </div>
 
-          <div className="Alb4">
+          <div className="AST4">
             <input
               type="radio"
               checked={this.state.op4}
@@ -96,15 +96,15 @@ class Albumin extends React.Component {
                 this.setState({ op2: false });
                 this.setState({ op3: false });
                 this.setState({ op4: true });
-                this.setState({ albumin: "filled" });
-                this.props.stateUpdater("Albumin", 4);
+                this.setState({ AST: "filled" });
+                this.props.stateUpdater("AST", 4);
               }}
             />
-            <p>&lt; 20</p>
+            <p>> 500</p>
           </div>
         </div>
       </div>
     );
   }
 }
-export default Albumin;
+export default AST;
