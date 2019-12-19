@@ -1,26 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #343944;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  font-size: 0.8em;
   color: white;
 }
 
@@ -28,11 +28,168 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TableContainer {
+  width: 100%;
+}
+
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  background: grey;
+  font-size: 1.5em;
+}
+
+select {
+  width: 98%;
+  height: 25px;
+
+  margin-bottom: 2.5px;
+  margin-top: 2.5px;
+}
+
+h2 {
+  font-size: 1.7em;
+  background: rgb(93, 95, 105);
+  padding: 1vh;
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 1.5em;
+}
+
+/* Status display */
+
+.unfilled {
+  background: orangered;
+  color: orangered;
+  grid-row-start: 1;
+  grid-row: span 4;
+  margin: 0;
+}
+
+.filled {
+  background: lightgreen;
+  color: lightgreen;
+  grid-row-start: 1;
+  grid-row: span 4;
+  margin: 0;
+}
+
+/* Radio Buttons */
+input {
+  text-align: center;
+  vertical-align: middle;
+  width: 45px;
+  height: 45px;
+  margin: 2.5px;
+  background-color: grey;
+}
+
+input:checked {
+  background-color: green;
+}
+
+/* LIVER DYSFUNCTION */
+.LDContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: 0.7em;
+  padding: 7.5px;
+}
+
+.LDTableTitle {
+  grid-row: 1;
+  grid-column: span 6;
+}
+
+.AscitesSelect {
+  grid-column: span 5;
+}
+
+/* DISEASE SEVERITY */
+
+.DSContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em;
+  margin: 7.5px;
+  border: 2px solid black;
+  /* border-radius: 5px; */
+  align-content: center;
+  align-items: center;
+}
+
+.DSTableTitle {
+  grid-row: 1;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+/* Albumin */
+
+.AlbuminTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+
+.AlbuminContainer {
+  grid-row: 3;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.AlbuminWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+/* Sepsis */
+
+.SepsisContainer {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.SepsisWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+}
+
+/* Invasive Access */
+
+.IAContainer {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+.IAWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
