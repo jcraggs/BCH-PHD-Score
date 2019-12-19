@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Paediatric Hepatology Dependency Score Web-App
 
-## Available Scripts
+This web application has been built with mobile users in mind. The aim of the web-app is to allow easy input for the PHD score during ward rounds which in turn should increase the monitoring of a patients condition and improve data collection and outcomes.
 
-In the project directory, you can run:
+The PHD score itself is a simple index of illness severity (and nursing dependency) in children with liver disease. This score is calculated via adding up the radio button and drop-down select inputs from the user.
 
-### `yarn start`
+Unforunately as this is a third-party project made by myself, it cannot be integrated with official NHS systems. However the ability to email the outcome of the PHD score has been added, and the plain text email generated could easily be incorporated into patient reports and letters.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The web-app can be found here : XXXXXX
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## The Tech side:
 
-### `yarn test`
+The web-app has been built using React and the XXXXX library which handles the emailing of the final score.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## The Medical side:
 
-### `yarn build`
+The PHD score was developed in the [Liver Unit at Birmingham Children’s Hospital](https://cdn.journals.lww.com/jpgn/Fulltext/2007/01000/Paediatric_Hepatology_Dependency_Score__PHD.22.aspx) between 1999-2009. The score includes 10 parameters:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    • Specific to liver dysfunction:
+         - AST
+         - Bilirubin
+         - Prothrombin time
+         - Presence of ascites
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    • More generally associated with disease severity:
+         - Albumin
+         - Sepsis
+         - Invasive access
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    • Associated with nursing dependency:
+        - Nutrition support
+        - Blood products required
+        - Organ dysfunction
 
-### `yarn eject`
+Although the number of parameters required to generate a score is quite high – this improves its sensitivity. The score was validated by asking independent observers to rate the illness severity of a cohort patients and then comparing the performance of the scores. The utility of the score for patients with liver disease secondary to another primary liver disease was [demonstrated in 2014](https://www.ncbi.nlm.nih.gov/pubmed/23856636). The final score for an individual patient was arrived at by simple addition, to allow calculation at the patient’s bedside. The addition of nursing dependency was incorporated in 2016. A score of zero describes a healthy patient, scores above 10 suggest a sick patient and scores 15-20 a seriously ill patient, and any score above 30 suggests high risk of immediate mortality. The maximum score is 45.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Glossary
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **AST** (aspartate aminotranferase) - a protein which leaks out of damaged liver cells which increases when the liver cell turnover is raised (reflects increased rate cell death).
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Bilirubin** - a product of liver metabolism which increases when the liver is under stress.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Prothrombin time** (PT) is a measure of clotting function and indicates how well the liver is making clotting proteins – it increases when the liver is under stress and/or when there is insufficient vitamin K in the body.
 
-## Learn More
+- **Ascites** - describes accumulation of fluid in the abdomen in the space between the abdominal wall and abdominal organs including liver and intestines – occurs when the blood flow through the liver is impeded especially if the albumin levels have also dropped.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Albumin** is a protein made in massive amounts by the liver and distributed in the blood to bind to other molecules and carry them round the body. A reduction in albumin occurs when the liver is under stress and/or not enough nutrition is being received (e.g. Kwashiorkor).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Sepsis** evokes an inflammatory response which may be mild (raised temperature) or more severe leading to prescription of antibiotics associated with micro-organisms detected in body fluids, and mostly severely a consumptive process resulting in low levels of coagulation products signified by low fibrinogen and disruption of metabolic homeostasis (and acidosis) signified by a low plasma bicarbonate (arterial or venous blood).
 
-### Code Splitting
+- **Invasive access** is required in many hospitalised patients, but those who require hyper-osmolar solutions (concentrated infusions of glucose or medications) will need them delivering into veins with high blood flows so that the wall of the vein is not damaged – in practice this means veins near to the heart “central access”.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- **Nutrition support** is provided to children who cannot sustain normal growth with their usual diet. The commonest support is a calorie enriched drink (200ml) given one to three times a day, but some children are so unwell that they lose their appetite and require the calories to be delivered in an liquid diet by tube passed through the nostril down into the stomach. When the intestinal tract is dysfunctional (e.g. bad gastroenteritis or after abdominal surgery) some children require intravenous rehydration and if dysfunction is prolonged, may also require intravenous nutrient also called Total Parenteral Nutrition (TPN).
 
-### Analyzing the Bundle Size
+- **Blood product usage** this included red blood cells, fresh frozen plasma, cryoprecipitate, immune globulin, albumin infusions. These products require close monitoring whilst being given in case of allergic reactions and effects on heart rate and blood pressure.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **Co-morbidity** refers to disease states other than liver dysfunction which will add to the patienst risk of mortality and nursing dependency e.g. diabetes; obesity; gastroenteritis; acute and chronic lung disease (e.g. cystic fibrosis); chronic kidney disease; encephalopathy (swelling of brain cells caused by severe liver dysfunction & metabolic acidosis; leading to confusion and delerium). Psychiatric disorders such as depression and/or pain unresponsive to usual prescribed pain killers necessitating a referral to pain team should score +2.
