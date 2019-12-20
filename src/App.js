@@ -3,6 +3,7 @@ import "./App.css";
 import LiverDysfunction from "./Components/LiverDysfunction";
 import DiseaseSeverity from "./Components/DiseaseSeverity";
 import NursingDependency from "./Components/NursingDependency";
+import InputNotes from "./Components/InputNotes";
 
 class App extends React.Component {
   state = {
@@ -26,7 +27,11 @@ class App extends React.Component {
   };
 
   submitReady = () => {
-    if (this.state.ComorClicked || this.state.OuterComorClicked) return true;
+    if (
+      (this.state.ComorClicked && this.scoreCalculator() >= 0) ||
+      (this.state.OuterComorClicked && this.scoreCalculator() >= 0)
+    )
+      return true;
     else return false;
   };
 
@@ -36,7 +41,6 @@ class App extends React.Component {
     obj.forEach(item => {
       total += item;
     });
-
     return total;
   };
 
@@ -48,7 +52,19 @@ class App extends React.Component {
           <LiverDysfunction stateUpdater={this.stateUpdater} />
           <DiseaseSeverity stateUpdater={this.stateUpdater} />
           <NursingDependency stateUpdater={this.stateUpdater} />
-          {this.submitReady() === true && <p>{this.scoreCalculator()}</p>}
+          {this.submitReady() === true && (
+            <p className="FinalScore">PHD Score: {this.scoreCalculator()}</p>
+          )}
+          {this.submitReady() === true && <InputNotes />}
+
+          <button
+            className="ResetButton"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
+            Reset
+          </button>
         </div>
       </div>
     );
