@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-class Sepsis extends React.Component {
+class InvasiveAccess extends React.Component {
   state = {
     IA: "unfilled"
   };
@@ -40,4 +40,4 @@ class Sepsis extends React.Component {
     );
   }
 }
-export default Sepsis;
+export default InvasiveAccess;
