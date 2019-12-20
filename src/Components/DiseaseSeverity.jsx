@@ -9,7 +9,6 @@ class DiseaseSeverity extends React.Component {
     return (
       <div className="DSContainer">
         <h2 className="DSTableTitle">Disease Severity</h2>
-
         <Albumin stateUpdater={this.props.stateUpdater} />
         <Sepsis stateUpdater={this.props.stateUpdater} />
         <InvasiveAccess stateUpdater={this.props.stateUpdater} />
