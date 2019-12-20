@@ -32,12 +32,20 @@ code {
   width: 100%;
 }
 
-/* button {
+button {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
-  background: grey;
+  background: rgb(80, 77, 77);
   font-size: 1.5em;
-} */
+  color: white;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ResetButton {
+  background: rgb(122, 31, 31);
+}
 
 select {
   width: 98%;
@@ -464,4 +472,30 @@ input:checked {
   padding-left: 20px;
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+.RefContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.FinalScore {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.emailbox {
+  background: white;
+  width: 97.5%;
+  height: auto;
+  text-align: left;
+}
+
+.inputRefBox {
+  background: white;
+  width: 97.5%;
+  height: auto;
+  text-align: left;
 }
