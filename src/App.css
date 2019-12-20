@@ -32,12 +32,12 @@ code {
   width: 100%;
 }
 
-button {
+/* button {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   background: grey;
   font-size: 1.5em;
-}
+} */
 
 select {
   width: 98%;
@@ -67,8 +67,8 @@ h3 {
   color: orangered;
   grid-row-start: 1;
   grid-row-end: 99;
-  margin-top: 0.01px;
-  margin-bottom: 0.01px;
+  margin-top: 0.2px;
+  margin-bottom: 0px;
 }
 
 .filled {
@@ -109,8 +109,9 @@ input:checked {
   grid-row: 1;
   width: 100%;
   padding: 0;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   padding-top: 5px;
+  border-bottom: 2px solid black;
 }
 
 /* AST */
@@ -140,6 +141,7 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
+  border-top: none;
   margin: 0;
 }
 /* Bilirubin */
@@ -170,6 +172,7 @@ input:checked {
   grid-column-end: 2;
   border: 2px solid black;
   border-top: none;
+  border-bottom: none;
   margin: 0;
 }
 
@@ -187,6 +190,7 @@ input:checked {
   flex-direction: row;
   justify-content: space-between;
   padding: 5px;
+  padding-bottom: 6px;
   font-size: 1.4em;
 }
 
@@ -199,7 +203,7 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
-  border-top: none;
+  border-bottom: none;
   margin: 0;
 }
 
@@ -218,6 +222,7 @@ input:checked {
   flex-direction: row;
   justify-content: space-between;
   padding: 5px;
+  padding-bottom: 6px;
   font-size: 1.4em;
 }
 
@@ -230,7 +235,7 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
-  border-top: none;
+  /* padding-top: 0.5px; */
   border-bottom: none;
   margin: 0;
 }
@@ -251,8 +256,9 @@ input:checked {
   grid-row: 1;
   width: 100%;
   padding: 0;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   padding-top: 5px;
+  border-bottom: 2px solid black;
 }
 /* Albumin */
 
@@ -281,6 +287,7 @@ input:checked {
   grid-column-start: 1;
   grid-column-end: 2;
   border: 2px solid black;
+  border-top: none;
   margin: 0;
 }
 
@@ -289,6 +296,11 @@ input:checked {
 .SepsisContainer {
   grid-row: 3;
   grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
 }
 
 .SepsisWrap {
@@ -301,11 +313,8 @@ input:checked {
   grid-column-end: 2;
   border: 2px solid black;
   border-top: none;
+  border-bottom: none;
   margin: 0;
-}
-
-.SepsisSelect {
-  font-size: 1.5em;
 }
 
 /* Invasive Access */
@@ -313,6 +322,11 @@ input:checked {
 .IAContainer {
   grid-row: 4;
   grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
 }
 
 .IAWrap {
@@ -323,8 +337,131 @@ input:checked {
   grid-row: 4;
   grid-column-start: 1;
   grid-column-end: 2;
+  border: 2px solid black;
+  border-bottom: none;
 }
 
-.IASelect {
-  font-size: 1.5em;
+/* NURSING DEPENDENCY */
+.NDContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7em;
+  margin: 7.5px;
+  border: 2px solid black;
+  align-content: center;
+  align-items: center;
+}
+
+.NDTableTitle {
+  grid-row: 1;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  border-bottom: 2px solid black;
+}
+
+/* Nutrition support */
+
+.NutritionContainer {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+.NutritionWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
+}
+
+/* Blood Products Usage */
+.BloodProdTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 4;
+}
+
+.BloodProdContainer {
+  grid-row: 5;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  padding-bottom: 6px;
+  font-size: 1.4em;
+}
+
+.BloodProdWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-bottom: none;
+  margin: 0;
+}
+
+/* Co-morbidity / organ dysfunction */
+.ComorbidtyProdTitle {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row: 5;
+}
+
+.ComorbidityWrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  flex-direction: row;
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 2px solid black;
+  border-bottom: none;
+  margin: 0;
+}
+
+.ComorbidityContainer {
+  grid-row: 5;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5px;
+  padding-bottom: 6px;
+  font-size: 1.4em;
+}
+
+.Comor1 {
+  text-align: left;
+}
+
+.checkbox {
+  width: 25px;
+  height: 25px;
+  padding-bottom: 30px;
+}
+
+.CoMorCheckboxContainer {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
