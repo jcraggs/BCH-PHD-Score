@@ -9,9 +9,19 @@ class NursingDependency extends React.Component {
     return (
       <div className="NDContainer">
         <h2 className="NDTableTitle">Nursing Dependency</h2>
-        <NutritionSupport stateUpdater={this.props.stateUpdater} />
-        <BloodProd stateUpdater={this.props.stateUpdater} />
-        <Comorbidity stateUpdater={this.props.stateUpdater} />
+        <NutritionSupport
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
+        <BloodProd
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
+        <Comorbidity
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+          comor_ref_objUpdater={this.props.comor_ref_objUpdater}
+        />
       </div>
     );
   }
