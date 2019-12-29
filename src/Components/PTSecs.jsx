@@ -30,6 +30,7 @@ class PTSecs extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ PTSecs: "filled" });
                 this.props.stateUpdater("PTSecs", 0);
+                this.props.ref_objUpdater("PTSecs_Txt", "< 13");
               }}
               checked={this.state.op0}
             />
@@ -48,6 +49,7 @@ class PTSecs extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ PTSecs: "filled" });
                 this.props.stateUpdater("PTSecs", 1);
+                this.props.ref_objUpdater("PTSecs_Txt", "14 - 19");
               }}
             />
             <p>14-19</p>
@@ -64,6 +66,7 @@ class PTSecs extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ PTSecs: "filled" });
                 this.props.stateUpdater("PTSecs", 2);
+                this.props.ref_objUpdater("PTSecs_Txt", "20 - 25");
               }}
             />
             <p>20-25</p>
@@ -81,6 +84,7 @@ class PTSecs extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ PTSecs: "filled" });
                 this.props.stateUpdater("PTSecs", 3);
+                this.props.ref_objUpdater("PTSecs_Txt", "26 - 30");
               }}
             />
             <p>26-30</p>
@@ -98,6 +102,7 @@ class PTSecs extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ PTSecs: "filled" });
                 this.props.stateUpdater("PTSecs", 4);
+                this.props.ref_objUpdater("PTSecs_Txt", "> 30");
               }}
             />
             <p>> 30</p>

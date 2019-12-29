@@ -19,11 +19,36 @@ class InvasiveAccess extends React.Component {
               if (event.target.value === "-- Select Value --") {
                 this.setState({ IA: "unfilled" });
                 this.props.stateUpdater("Invasive_Access", undefined);
+                this.props.ref_objUpdater("Invasive_Access_Txt", "");
               } else {
                 this.props.stateUpdater(
                   "Invasive_Access",
                   Number(event.target.value)
                 );
+                if (Number(event.target.value) === 0) {
+                  this.props.ref_objUpdater("Invasive_Access_Txt", "None");
+                }
+                if (Number(event.target.value) === 1) {
+                  this.props.ref_objUpdater("Invasive_Access_Txt", "IV access");
+                }
+                if (Number(event.target.value) === 2) {
+                  this.props.ref_objUpdater(
+                    "Invasive_Access_Txt",
+                    "IV glucose at 10%"
+                  );
+                }
+                if (Number(event.target.value) === 3) {
+                  this.props.ref_objUpdater(
+                    "Invasive_Access_Txt",
+                    "Central access"
+                  );
+                }
+                if (Number(event.target.value) === 4) {
+                  this.props.ref_objUpdater(
+                    "Invasive_Access_Txt",
+                    "CVP monitor; epidural"
+                  );
+                }
                 this.setState({ IA: "filled" });
               }
             }}

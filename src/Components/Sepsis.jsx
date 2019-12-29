@@ -19,8 +19,24 @@ class Sepsis extends React.Component {
               if (event.target.value === "-- Select Value --") {
                 this.setState({ sepsis: "unfilled" });
                 this.props.stateUpdater("Sepsis", undefined);
+                this.props.ref_objUpdater("Sepsis_Txt", "");
               } else {
                 this.props.stateUpdater("Sepsis", Number(event.target.value));
+                if (Number(event.target.value) === 0) {
+                  this.props.ref_objUpdater("Sepsis_Txt", "None");
+                }
+                if (Number(event.target.value) === 1) {
+                  this.props.ref_objUpdater("Sepsis_Txt", "Pyrexial");
+                }
+                if (Number(event.target.value) === 2) {
+                  this.props.ref_objUpdater("Sepsis_Txt", "Antibiotics");
+                }
+                if (Number(event.target.value) === 3) {
+                  this.props.ref_objUpdater("Sepsis_Txt", "+ve micro");
+                }
+                if (Number(event.target.value) === 4) {
+                  this.props.ref_objUpdater("Sepsis_Txt", "DIC");
+                }
                 this.setState({ sepsis: "filled" });
               }
             }}

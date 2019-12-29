@@ -30,6 +30,7 @@ class BloodProd extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ BloodProd: "filled" });
                 this.props.stateUpdater("BloodProd", 0);
+                this.props.ref_objUpdater("BloodProd_Txt", "None");
               }}
               checked={this.state.op0}
             />
@@ -48,6 +49,7 @@ class BloodProd extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ BloodProd: "filled" });
                 this.props.stateUpdater("BloodProd", 1);
+                this.props.ref_objUpdater("BloodProd_Txt", "1");
               }}
             />
             <p>1</p>
@@ -64,6 +66,7 @@ class BloodProd extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ BloodProd: "filled" });
                 this.props.stateUpdater("BloodProd", 2);
+                this.props.ref_objUpdater("BloodProd_Txt", "2");
               }}
             />
             <p>2</p>
@@ -81,6 +84,7 @@ class BloodProd extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ BloodProd: "filled" });
                 this.props.stateUpdater("BloodProd", 3);
+                this.props.ref_objUpdater("BloodProd_Txt", "3");
               }}
             />
             <p>3</p>
@@ -98,6 +102,7 @@ class BloodProd extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ BloodProd: "filled" });
                 this.props.stateUpdater("BloodProd", 4);
+                this.props.ref_objUpdater("BloodProd_Txt", "4");
               }}
             />
             <p>4</p>

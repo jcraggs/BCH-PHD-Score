@@ -19,11 +19,33 @@ class Nutrition extends React.Component {
               if (event.target.value === "-- Select Value --") {
                 this.setState({ Nutrition: "unfilled" });
                 this.props.stateUpdater("Nutrition_Support", undefined);
+                this.props.ref_objUpdater("Nutrition_Support_Txt", "");
               } else {
                 this.props.stateUpdater(
                   "Nutrition_Support",
                   Number(event.target.value)
                 );
+                if (Number(event.target.value) === 0) {
+                  this.props.ref_objUpdater("Nutrition_Support_Txt", "None");
+                }
+                if (Number(event.target.value) === 1) {
+                  this.props.ref_objUpdater("Nutrition_Support_Txt", "NG Tube");
+                }
+                if (Number(event.target.value) === 2) {
+                  this.props.ref_objUpdater(
+                    "Nutrition_Support_Txt",
+                    "Specialised feed/ calorie support"
+                  );
+                }
+                if (Number(event.target.value) === 3) {
+                  this.props.ref_objUpdater(
+                    "Nutrition_Support_Txt",
+                    "IV fluids to hydrate"
+                  );
+                }
+                if (Number(event.target.value) === 4) {
+                  this.props.ref_objUpdater("Nutrition_Support_Txt", "TPN");
+                }
                 this.setState({ Nutrition: "filled" });
               }
             }}

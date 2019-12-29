@@ -30,6 +30,7 @@ class Bilirubin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Bilirubin: "filled" });
                 this.props.stateUpdater("Bilirubin", 0);
+                this.props.ref_objUpdater("Bilirubin_Txt", "0 - 20");
               }}
               checked={this.state.op0}
             />
@@ -48,6 +49,7 @@ class Bilirubin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Bilirubin: "filled" });
                 this.props.stateUpdater("Bilirubin", 1);
+                this.props.ref_objUpdater("Bilirubin_Txt", "21 - 70");
               }}
             />
             <p>21-70</p>
@@ -64,6 +66,7 @@ class Bilirubin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Bilirubin: "filled" });
                 this.props.stateUpdater("Bilirubin", 2);
+                this.props.ref_objUpdater("Bilirubin_Txt", "71 - 150");
               }}
             />
             <p>71-150</p>
@@ -81,6 +84,7 @@ class Bilirubin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Bilirubin: "filled" });
                 this.props.stateUpdater("Bilirubin", 3);
+                this.props.ref_objUpdater("Bilirubin_Txt", "151 - 300");
               }}
             />
             <p>151-300</p>
@@ -98,6 +102,7 @@ class Bilirubin extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ Bilirubin: "filled" });
                 this.props.stateUpdater("Bilirubin", 4);
+                this.props.ref_objUpdater("Bilirubin_Txt", "> 300");
               }}
             />
             <p>> 300</p>

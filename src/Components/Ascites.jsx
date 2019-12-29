@@ -19,8 +19,27 @@ class Ascites extends React.Component {
               if (event.target.value === "-- Select Value --") {
                 this.setState({ Ascites: "unfilled" });
                 this.props.stateUpdater("Ascites", undefined);
+                this.props.ref_objUpdater("Ascites_Txt", "");
               } else {
                 this.props.stateUpdater("Ascites", Number(event.target.value));
+                if (Number(event.target.value) === 0) {
+                  this.props.ref_objUpdater("Ascites_Txt", "None");
+                }
+                if (Number(event.target.value) === 1) {
+                  this.props.ref_objUpdater("Ascites_Txt", "On diuretics");
+                }
+                if (Number(event.target.value) === 2) {
+                  this.props.ref_objUpdater("Ascites_Txt", "Mild");
+                }
+                if (Number(event.target.value) === 3) {
+                  this.props.ref_objUpdater("Ascites_Txt", "Gross");
+                }
+                if (Number(event.target.value) === 4) {
+                  this.props.ref_objUpdater(
+                    "Ascites_Txt",
+                    "Gross with drainage"
+                  );
+                }
                 this.setState({ Ascites: "filled" });
               }
             }}
