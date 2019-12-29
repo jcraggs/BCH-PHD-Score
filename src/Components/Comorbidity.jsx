@@ -37,6 +37,7 @@ class Comorbidity extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Comorbidity: "filled" });
                 this.props.stateUpdater("Comorbidity", 0);
+                this.props.ref_objUpdater("Comorbidity_Txt", "None");
                 this.props.stateUpdater("OuterComorClicked", true);
               }}
               checked={this.state.op0}
@@ -51,6 +52,11 @@ class Comorbidity extends React.Component {
                 if (this.state.op1 === true) {
                   this.setState({ op1: false });
                   this.props.stateUpdater("ComorAdditonal", 0);
+                  this.props.comor_ref_objUpdater("Dia_Txt", "");
+                  this.props.comor_ref_objUpdater("Renal_Txt", "");
+                  this.props.comor_ref_objUpdater("Ence_Txt", "");
+                  this.props.comor_ref_objUpdater("BMI_Txt", "");
+                  this.props.comor_ref_objUpdater("Oxy_Txt", "");
                 }
                 if (this.state.op1 === false) {
                   this.setState({ op1: true });
@@ -62,6 +68,7 @@ class Comorbidity extends React.Component {
             {this.state.op1 === true && (
               <ComorCheckboxes
                 stateUpdater={this.props.stateUpdater}
+                comor_ref_objUpdater={this.props.comor_ref_objUpdater}
                 updateFillState={this.updateFillState}
               />
             )}
@@ -78,6 +85,10 @@ class Comorbidity extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Comorbidity: "filled" });
                 this.props.stateUpdater("Comorbidity", 2);
+                this.props.ref_objUpdater(
+                  "Comorbidity_Txt",
+                  "Referral to pain team or CAMHS"
+                );
                 this.props.stateUpdater("OuterComorClicked", true);
               }}
             />
@@ -95,6 +106,10 @@ class Comorbidity extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ Comorbidity: "filled" });
                 this.props.stateUpdater("Comorbidity", 3);
+                this.props.ref_objUpdater(
+                  "Comorbidity_Txt",
+                  "Inotropes Required"
+                );
                 this.props.stateUpdater("OuterComorClicked", true);
               }}
             />
@@ -112,6 +127,10 @@ class Comorbidity extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ Comorbidity: "filled" });
                 this.props.stateUpdater("Comorbidity", 4);
+                this.props.ref_objUpdater(
+                  "Comorbidity_Txt",
+                  "Optiflow; tracheostomy"
+                );
                 this.props.stateUpdater("OuterComorClicked", true);
               }}
             />
