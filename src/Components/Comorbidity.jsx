@@ -50,6 +50,7 @@ class Comorbidity extends React.Component {
               onClick={() => {
                 if (this.state.op1 === true) {
                   this.setState({ op1: false });
+                  this.props.stateUpdater("ComorAdditonal", 0);
                 }
                 if (this.state.op1 === false) {
                   this.setState({ op1: true });
