@@ -34,10 +34,11 @@ App.js
 │   └── Comorbidity
 │       └── CoMorCheckboxes
 │
-├── SuccessMessage
-├── FailureMessage
+├── InputNotes
+│   └── Loading
 │
-└── InputNotes
+├── SuccessMessage
+└── FailureMessage
 ```
 
 ## The Medical side:
