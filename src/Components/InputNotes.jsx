@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import Loading from "./Loading";
 
 class InputNotes extends React.Component {
   state = { comment: "", email: "" };
@@ -9,6 +10,7 @@ class InputNotes extends React.Component {
     await this.props.stateUpdater("emailAddress", this.state.email);
     await this.props.stateUpdater("comment", this.state.comment);
     if (this.state.email !== "") {
+      this.props.stateUpdater("isLoading", true);
       this.props.submitEmail();
       this.setState({ email: "" });
     }
@@ -17,7 +19,7 @@ class InputNotes extends React.Component {
   render() {
     return (
       <form className="RefContainer" onSubmit={this.handleSubmit}>
-        <label>Enter notes/ email reference (optional):</label>
+        <label>Enter notes/ reference (optional):</label>
         <textarea
           aria-label="Comment box"
           value={this.state.comment}
@@ -40,16 +42,23 @@ class InputNotes extends React.Component {
             this.setState({ email: event.target.value });
           }}
         ></input>
+        <div className="emailAndLoadingContainer">
+          <button
+            className="commentSubmitButton"
+            type="submit"
+            onSubmit={event => {
+              this.handleSubmit(event);
+            }}
+          >
+            Email Score
+          </button>
+          {!this.props.loadingStatus && <p className="loadingPlaceholder"></p>}
+          {this.props.loadingStatus && <Loading />}
+        </div>
 
-        <button
-          className="commentSubmitButton"
-          type="submit"
-          onSubmit={event => {
-            this.handleSubmit(event);
-          }}
-        >
-          Email Score
-        </button>
+        <p className="RefContainerP">
+          Check your spam/junk inbox if the email does not come through!
+        </p>
       </form>
     );
   }
