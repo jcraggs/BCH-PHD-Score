@@ -45,7 +45,8 @@ class App extends React.Component {
       Oxy_Txt: ""
     },
     emailAddress: "",
-    comment: ""
+    comment: "",
+    isLoading: false
   };
 
   stateUpdater = (category, score) => {
@@ -88,9 +89,24 @@ class App extends React.Component {
     else return false;
   };
 
+  filledCounter = () => {
+    let obj = Object.values(this.state);
+    const newObj = obj.splice(0, obj.length - 11);
+    let clicked = 0;
+    newObj.forEach(item => {
+      if (item !== undefined) {
+        clicked++;
+      }
+    });
+    if (this.state.ComorClicked || this.state.OuterComorClicked) {
+      clicked++;
+    }
+    return clicked;
+  };
+
   scoreCalculator = () => {
     let obj = Object.values(this.state);
-    const newObj = obj.splice(0, obj.length - 4);
+    const newObj = obj.splice(0, obj.length - 5);
 
     let total = 0;
     newObj.forEach(item => {
@@ -144,6 +160,7 @@ class App extends React.Component {
         }
       })
       .then(response => {
+        this.setState({ isLoading: false });
         if (response.data.msg === "success") {
           this.setState({ display_success: true }, () => {
             setTimeout(() => {
@@ -177,14 +194,15 @@ class App extends React.Component {
             stateUpdater={this.stateUpdater}
             ref_objUpdater={this.ref_objUpdater}
             comor_ref_objUpdater={this.comor_ref_objUpdater}
+            outComorStatus={this.state.OuterComorClicked}
           />
           {this.submitReady() === true && (
             <div>
               <p className="FinalScore">PHD Score: {this.scoreCalculator()}</p>
               <div className="ScoreBreakDownContainer">
-                <p className="ScoreBreakdown">Score Meaning</p>
+                <h1 className="ScoreBreakdown">Score Interpretation</h1>
                 <ul className="ScoringList">
-                  <li>0 = Healthy patient</li>
+                  <li>0 = Clinical indications absent</li>
                   <li>1 - 9 = Unwell </li>
                   <li>10 - 14 = Sick</li>
                   <li>15 - 29 = Seriously ill</li>
@@ -199,9 +217,12 @@ class App extends React.Component {
             <InputNotes
               submitEmail={this.submitEmail}
               stateUpdater={this.stateUpdater}
+              loadingStatus={this.state.isLoading}
             />
           )}
-
+          {this.submitReady() !== true && (
+            <p> {this.filledCounter()} of 10 fields filled in</p>
+          )}
           <button
             className="ResetButton"
             onClick={() => {
