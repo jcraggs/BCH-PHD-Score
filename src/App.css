@@ -67,6 +67,10 @@ h3 {
   font-size: 1.5em;
 }
 
+p {
+  font-size: 0.9em;
+}
+
 /* Status display */
 
 .unfilled {
@@ -91,8 +95,8 @@ h3 {
 input {
   text-align: center;
   vertical-align: middle;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   margin: 2.5px;
   background-color: grey;
 }
@@ -481,6 +485,11 @@ input:checked {
   align-items: center;
 }
 
+.RefContainerP {
+  margin: 0;
+  font-size: 1.2em;
+}
+
 .FinalScore {
   font-size: 3em;
   font-weight: bold;
@@ -518,6 +527,35 @@ input:checked {
   padding: 5px;
 }
 
+img#loader {
+  display: inline-block;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.loading {
+  align-items: center;
+  align-self: center;
+}
+
+.loadingPlaceholder {
+  margin: 10px;
+}
+
+.emailAndLoadingContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentSubmitButton {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.emailAndLoadingContainer {
+  padding-left: 30px;
+}
+
 .ScoringList {
   text-align: left;
   margin-bottom: 25px;
@@ -532,4 +570,19 @@ input:checked {
 li {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+/* CSS for Desktop and Larger devices */
+
+@media only screen and (min-width: 750px) {
+  .TableContainer {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    max-width: 70vw;
+    min-width: 70vw;
+  }
 }
