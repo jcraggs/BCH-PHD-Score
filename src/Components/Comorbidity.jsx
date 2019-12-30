@@ -57,9 +57,13 @@ class Comorbidity extends React.Component {
                   this.props.comor_ref_objUpdater("Ence_Txt", "");
                   this.props.comor_ref_objUpdater("BMI_Txt", "");
                   this.props.comor_ref_objUpdater("Oxy_Txt", "");
+                  this.props.stateUpdater("ComorClicked", false);
                 }
                 if (this.state.op1 === false) {
                   this.setState({ op1: true });
+                }
+                if (this.props.outComorStatus !== true) {
+                  this.setState({ Comorbidity: "unfilled" });
                 }
               }}
               checked={this.state.op1}

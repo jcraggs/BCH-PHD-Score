@@ -21,6 +21,7 @@ class NursingDependency extends React.Component {
           stateUpdater={this.props.stateUpdater}
           ref_objUpdater={this.props.ref_objUpdater}
           comor_ref_objUpdater={this.props.comor_ref_objUpdater}
+          outComorStatus={this.props.outComorStatus}
         />
       </div>
     );
