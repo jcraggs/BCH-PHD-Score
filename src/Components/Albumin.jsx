@@ -30,6 +30,7 @@ class Albumin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ albumin: "filled" });
                 this.props.stateUpdater("Albumin", 0);
+                this.props.ref_objUpdater("Albumin_Txt", "> 35");
               }}
               checked={this.state.op0}
             />
@@ -48,6 +49,7 @@ class Albumin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ albumin: "filled" });
                 this.props.stateUpdater("Albumin", 1);
+                this.props.ref_objUpdater("Albumin_Txt", "30 - 34");
               }}
             />
             <p>30-34</p>
@@ -64,6 +66,7 @@ class Albumin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ albumin: "filled" });
                 this.props.stateUpdater("Albumin", 2);
+                this.props.ref_objUpdater("Albumin_Txt", "25 - 29");
               }}
             />
             <p>25-29</p>
@@ -81,6 +84,7 @@ class Albumin extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ albumin: "filled" });
                 this.props.stateUpdater("Albumin", 3);
+                this.props.ref_objUpdater("Albumin_Txt", "20 - 24");
               }}
             />
             <p>20-24</p>
@@ -98,6 +102,7 @@ class Albumin extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ albumin: "filled" });
                 this.props.stateUpdater("Albumin", 4);
+                this.props.ref_objUpdater("Albumin_Txt", "< 20");
               }}
             />
             <p>&lt; 20</p>

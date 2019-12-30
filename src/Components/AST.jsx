@@ -30,6 +30,7 @@ class AST extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ AST: "filled" });
                 this.props.stateUpdater("AST", 0);
+                this.props.ref_objUpdater("AST_Txt", "0 - 50");
               }}
               checked={this.state.op0}
             />
@@ -48,6 +49,7 @@ class AST extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ AST: "filled" });
                 this.props.stateUpdater("AST", 1);
+                this.props.ref_objUpdater("AST_Txt", "51 - 150");
               }}
             />
             <p>51-150</p>
@@ -64,6 +66,7 @@ class AST extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ AST: "filled" });
                 this.props.stateUpdater("AST", 2);
+                this.props.ref_objUpdater("AST_Txt", "151 - 300");
               }}
             />
             <p>151-300</p>
@@ -81,6 +84,7 @@ class AST extends React.Component {
                 this.setState({ op4: false });
                 this.setState({ AST: "filled" });
                 this.props.stateUpdater("AST", 3);
+                this.props.ref_objUpdater("AST_Txt", "301 - 500");
               }}
             />
             <p>301-500</p>
@@ -98,6 +102,7 @@ class AST extends React.Component {
                 this.setState({ op4: true });
                 this.setState({ AST: "filled" });
                 this.props.stateUpdater("AST", 4);
+                this.props.ref_objUpdater("AST_Txt", "> 500");
               }}
             />
             <p>> 500</p>

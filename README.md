@@ -6,11 +6,39 @@ The PHD score itself is a simple index of illness severity (and nursing dependen
 
 Unforunately as this is a third-party project made by myself, it cannot be integrated with official NHS systems. However the ability to email the outcome of the PHD score has been added, and the plain text email generated could easily be incorporated into patient reports and letters.
 
-The web-app can be found here : XXXXXX
+The web-app can be found here : https://bch-phd.netlify.com/
 
 ## The Tech side:
 
-The web-app has been built using React and the XXXXX library which handles the emailing of the final score.
+The front end of this web-app has been built using React.js and deployed on Netlify. The emailing and back end has been built using node.js, express, axios and nodemailer and deployed on Heroku.
+
+### React App Structure
+
+```raw
+App.js
+│
+├── LiverDysfunction
+│   ├── AST
+│   ├── Bilirubin
+│   ├── PTSecs
+│   └── Ascites
+│
+├── DiseaseSeverity
+│   ├── Albumin
+│   ├── Sepsis
+│   └── InvasiveAccess
+│
+├── NursingDependency
+│   ├── NutritionSupport
+│   ├── BloodProd
+│   └── Comorbidity
+│       └── CoMorCheckboxes
+│
+├── SuccessMessage
+├── FailureMessage
+│
+└── InputNotes
+```
 
 ## The Medical side:
 

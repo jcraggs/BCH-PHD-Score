@@ -11,10 +11,22 @@ class LiverDysfunction extends React.Component {
       <div className="LDContainer">
         <h2 className="LDTableTitle">Liver dysfunction</h2>
 
-        <AST stateUpdater={this.props.stateUpdater} />
-        <Bilirubin stateUpdater={this.props.stateUpdater} />
-        <PTSecs stateUpdater={this.props.stateUpdater} />
-        <Ascites stateUpdater={this.props.stateUpdater} />
+        <AST
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
+        <Bilirubin
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
+        <PTSecs
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
+        <Ascites
+          stateUpdater={this.props.stateUpdater}
+          ref_objUpdater={this.props.ref_objUpdater}
+        />
       </div>
     );
   }

@@ -4,11 +4,13 @@ import "../App.css";
 class InputNotes extends React.Component {
   state = { comment: "", email: "" };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
+    await this.props.stateUpdater("emailAddress", this.state.email);
+    await this.props.stateUpdater("comment", this.state.comment);
     if (this.state.email !== "") {
-      //this.submitEmail();
-      this.setState({ comment: "", email: "" });
+      this.props.submitEmail();
+      this.setState({ email: "" });
     }
   };
 
