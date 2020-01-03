@@ -15,7 +15,7 @@ class BloodProd extends React.Component {
     return (
       <div className="BloodProdWrap">
         <p className={this.state.BloodProd}> _</p>
-        <h3 className="BloodProdTitle">Blood Product Usage</h3>
+        <h3 className="BloodProdTitle">Blood Product Usage (past 7 days)</h3>
 
         <div className="BloodProdContainer">
           <div className="BloodProd0">
@@ -105,7 +105,7 @@ class BloodProd extends React.Component {
                 this.props.ref_objUpdater("BloodProd_Txt", "4");
               }}
             />
-            <p>4</p>
+            <p>4+</p>
           </div>
         </div>
       </div>
